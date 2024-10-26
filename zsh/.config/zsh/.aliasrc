@@ -1,0 +1,5 @@
+# General aliases
+alias ls="lsd"
+alias cat="bat"
+alias unimatrix="unimatrix -n -l 'aAcCgGnsS'"
+alias icat="kitten icat"

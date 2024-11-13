@@ -45,22 +45,49 @@ tooltip label {
   border-radius: 1rem;
 }
 
-#clock,
-#battery,
-#network,
 #wireplumber,
-#custom-music
-/*#custom-lock,*/
-/*#custom-power*/ {
+#bluetooth,
+#network,
+#battery,
+#clock,
+#custom-music {
   background-color: @surface0;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
-#clock {
+#wireplumber {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#wireplumber.muted {
+  color: @text;
+}
+
+#bluetooth,
+#bluetooth.off,
+#bluetooth.disabled {
+  color: @text;
+}
+
+#bluetooth.on,
+#bluetooth.connected {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+}
+
+#network,
+#network.wifi,
+#network.linked,
+#network.ethernet
+{
+  color: @sky;
+}
+
+#network.disabled,
+#network.disconnected {
+  color: @red;
 }
 
 #battery {
@@ -80,27 +107,10 @@ tooltip label {
   color: @red;
 }
 
-#network,
-#network.wifi,
-#network.linked,
-#network.ethernet
-{
-  color: @sky;
-}
-
-#network.disabled,
-#network.disconnected {
-  color: @red;
-}
-
-#wireplumber {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
-}
-
-#wireplumber.muted {
-  color: @text;
+#clock {
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 
 #custom-music {

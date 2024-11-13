@@ -9,6 +9,7 @@
   ],
   "modules-right": [
     "wireplumber",
+    "bluetooth",
     "network",
     "battery",
     "clock"
@@ -51,6 +52,8 @@
     },
     "actions": {
       "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
     }
@@ -67,10 +70,11 @@
     "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
   "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": " {volume}%",
+    "format": "{icon}  {volume}%",
+    "format-muted": "  {volume}%",
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    // "on-click": "helvum",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +10%",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -10%",
     "format-icons": ["", "", ""]
   },
   "network": {
@@ -82,8 +86,13 @@
     "tooltip-format-wifi": "{ifname} {essid}",
     "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
     "tooltip-format-disconnected": "Disconnected"
-  }
-  /*,
+  },
+  "bluetooth": {
+	  "format": "",
+	  "tooltip-format": "{status}",
+	  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n{device_enumerate}",
+	  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  }/*,
   "custom/lock": {
     "tooltip": false,
     "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",

@@ -22,13 +22,14 @@ error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](subtext1)"
 
 [directory]
-format = '[](blue)[ $path]($style)[ $read_only]($read_only_style)'
+format = '[  ](blue)[$path]($style)[ $read_only]($read_only_style)'
 
 [directory.substitutions]
-"documents" = "󰈙"
-"downloads" = ""
-"music" = "󰝚"
-"pictures" = ""
+"Documents" = "󰈙"
+"Downloads" = "󰉍"
+"Music" = "󱍙"
+"Pictures" = ""
+"Videos" = ""
 "developer" = "󰲋"
 
 [line_break]

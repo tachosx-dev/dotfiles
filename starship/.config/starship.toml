@@ -44,13 +44,16 @@ Arch = "󰣇"
 format = '[$symbol$branch(:$remote_branch)]($style) '
 symbol = '🌱 '
 
+[cmd_duration]
+format = '[⏱ $duration]($style)'
+
 [package]
 disabled = true
 
 [time]
 format = '[[  $time ](fg:text bg:surface0)]($style)'
 style = "bg:surface0"
-disabled = false
+disabled = true
 
 [username]
 format = '[](fg:mauve)[ $user ]($style)'
